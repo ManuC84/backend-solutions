@@ -10,16 +10,16 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <!-- Left Side Of Navbar -->
           <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link active" href="/">Home</a>
+                <li class="{{ Request::is('/') ? 'nav-item active' : 'nav-item' }}">
+                    <a class="nav-link" href="/">Home</a>
                   </li>
-                  <li class="nav-item">
+                  <li class="{{ Request::is('about') ? 'nav-item active' : 'nav-item' }}">
                     <a class="nav-link" href="/about">About</a>
                   </li>
-                  <li class="nav-item">
+                  <li class="{{ Request::is('services') ? 'nav-item active' : 'nav-item' }}">
                     <a class="nav-link" href="/services">Services</a>
                   </li>
-                  <li class="nav-item">
+                  <li class="{{ Request::is('posts') ? 'nav-item active' : 'nav-item' }}">
                     <a class="nav-link" href="/posts">Blog</a>
                   </li>
                 </ul>
