@@ -16,6 +16,7 @@ After a text template has been created and saved with a name that clearly descri
                 <p><a href="/login" class="btn btn-primary btn-lg" role="button">Login</a> <a href="/register" class="btn btn-success btn-lg">Register</a></p>
             </div>
             @else 
+            <div class="container" style="height:90vh">
                 <div class="jumbotron text-center  main-bg">
                     <h1>Welcome to Backend Solutions</h1>
                     <p>The power of text templates for businesses
@@ -26,6 +27,7 @@ Composing customer-facing messages can be daunting for some individuals. Speakin
 After a text template has been created and saved with a name that clearly describes its purpose, employees can click on the template, update key fields as needed, and send it without the original template being altered.  </p>
                     <h4 class="btn btn-success btn-lg">Welcome back, you're logged in!</h4>
                 </div>
+</div>
         @endif
     </div>
 </div>

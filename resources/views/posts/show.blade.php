@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+<div class="jumbotron">
     <a href="/posts" class="btn btn-secondary mb-2 ">Go Back</a>
     <h1>{{$post->title}}</h1>
     @if($post->cover_image !== 'noimage.jpg') 
@@ -28,5 +29,6 @@
             
         @endif
     @endif
+</div>
 @endsection
            

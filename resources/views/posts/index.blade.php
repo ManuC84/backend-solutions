@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+<div class="jumbotron">
     <h1>Posts</h1>
     <a href="/posts/create" class="btn btn-primary mb-4">Create post</a>
     @if(count($posts) > 0)
@@ -26,5 +27,5 @@
     @else
             <p>No posts found</p>
     @endif        
-    
+</div>
     @endsection
