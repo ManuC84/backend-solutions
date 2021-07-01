@@ -4,16 +4,19 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Post;
+use App\User;
 
 class PagesController extends Controller
 {
     public function index()
     {
         $title = 'Welcome to Laravel!';
+        $user_id = auth()->user()->id;
+        $user = User::find($user_id);
         //return view('pages.index', compact('title'));
-        return view('pages.index')->with('title', $title);
+        return view('pages.index')->with('user', $user);
 
-        
+
 
     }
 
