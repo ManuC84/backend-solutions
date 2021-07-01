@@ -10,10 +10,15 @@ class PagesController extends Controller
 {
     public function index()
     {
-        $title = 'Welcome to Laravel!';
-        $user_id = auth()->user()->id;
-        $user = User::find($user_id);
-        //return view('pages.index', compact('title'));
+
+        $user = null;
+        if(auth()->user()) {
+            $user_id = auth()->user()->id;
+            $user = User::find($user_id);
+        }
+        // $user_id = auth()->user()->id;
+        // $user = User::find($user_id);
+
         return view('pages.index')->with('user', $user);
 
 
