@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+<div class="container" style="height:90vh">
 <div class="jumbotron">
     <h1>Posts</h1>
     <a href="/posts/create" class="btn btn-primary mb-4">Create post</a>
@@ -27,5 +28,6 @@
     @else
             <p>No posts found</p>
     @endif        
+</div>
 </div>
     @endsection
