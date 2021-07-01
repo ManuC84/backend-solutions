@@ -1,15 +1,16 @@
 <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm mb-4">
     <div class="container">
-        <a class="navbar-brand" href="{{ url('/') }}">
-           <img src=" {{ asset('img/logo.png') }}" alt="" class="float-left" style="width: 40%">
+        <a class="navbar-brand" href="{{ url('/') }}" style="width:150px;">
+           <img src=" {{ asset('img/logo.png') }}" alt="" class="float-left" style="width: 100%">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+
             <!-- Left Side Of Navbar -->
-          <ul class="navbar-nav">
+          <ul class="navbar-nav" style="text-align: center; margin-left:auto;">
                 <li class="{{ Request::is('/') ? 'nav-item active' : 'nav-item' }}">
                     <a class="nav-link" href="/">Home</a>
                   </li>
@@ -25,7 +26,7 @@
                 </ul>
 
             <!-- Right Side Of Navbar -->
-            <ul class="navbar-nav ml-auto">
+            <ul class="navbar-nav" style="text-align: center; margin-left:auto;">
                 <!-- Authentication Links -->
                 @guest
                     <li class="nav-item">
@@ -59,12 +60,12 @@
                         </div>
                     </li>
                     </div>
-                        
-                     
+
+
                 @endguest
             </ul>
         </div>
-        
+
     </div>
 </nav>
 
