@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container" style="height:90vh">
-<div class="jumbotron">
+<div class="jumbotron" style="overflowY: scroll;height:85vh">
     <h1>Posts</h1>
     <a href="/posts/create" class="btn btn-primary mb-4">Create post</a>
     @if(count($posts) > 0)
@@ -15,19 +15,19 @@
             </div>
             <div class="row">
                 <div class="col-md-4 col-sm-4">
-                    @if($post->cover_image !== 'noimage.jpg') 
-                        <img style="width:100%" src="/storage/cover_images/{{$post->cover_image}}">
-                    
+                    @if($post->cover_image !== 'noimage.jpg')
+                        <img style="width:100%" src="{{$post->cover_image}}">
+
                     @endif
             </div>
             </div>
-            
+
         </div>
         @endforeach
         {{$posts->links()}}
     @else
             <p>No posts found</p>
-    @endif        
+    @endif
 </div>
 </div>
     @endsection

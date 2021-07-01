@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\View;
 use App\Post;
-
+use Image;
 
 class PostsController extends Controller
 {
@@ -20,7 +20,7 @@ class PostsController extends Controller
         $this->middleware('auth', ['except' => ['index', 'show']]);
     }
 
-    
+
     /**
      * Display a listing of the resource.
      *
@@ -57,7 +57,9 @@ class PostsController extends Controller
             'cover_image' => 'image|nullable|max:1999'
         ]);
 
-        //handle file upload 
+        $base_location = 'user_documents';
+
+        //handle file upload
         if($request->hasFile('cover_image')){
             //get filename with extension
             $filenameWithExt = $request->file('cover_image')->getClientOriginalName();
@@ -69,6 +71,10 @@ class PostsController extends Controller
             $fileNameToStore = $filename. '_'.time().'.'.$extension;
             //upload image
             $path = $request->file('cover_image')->storeAs('public/cover_images', $fileNameToStore);
+            $documentPath = $request->file('cover_image')->storePublicly($base_location, 's3');
+
+            $image = Storage::disk('s3')->url($documentPath);
+
         } else{
             $fileNameToStore = 'noimage.jpg';
         }
@@ -78,7 +84,7 @@ class PostsController extends Controller
         $post->title = $request->input('title');
         $post->body = $request->input('body');
         $post->user_id = auth()->user()->id;
-        $post->cover_image = $fileNameToStore;
+        $post->cover_image = $image;
         $post->save();
 
         return redirect('/posts')->with('success', 'Post Created');
@@ -95,7 +101,7 @@ class PostsController extends Controller
     {
         $post = Post::find($id);
         return view('posts.show')->with('post', $post);
-       
+
     }
 
     /**
@@ -131,7 +137,7 @@ class PostsController extends Controller
         ]);
 
 
-          //handle file upload 
+          //handle file upload
           if($request->hasFIle('cover_image')){
             //get filename with extension
             $filenameWithExt = $request->file('cover_image')->getClientOriginalName();
@@ -143,7 +149,7 @@ class PostsController extends Controller
             $fileNameToStore = $filename. '_'.time().'.'.$extension;
             //upload image
             $path = $request->file('cover_image')->storeAs('public/cover_images', $fileNameToStore);
-        } 
+        }
 
         //update post
 

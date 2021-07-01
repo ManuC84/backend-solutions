@@ -12,11 +12,11 @@
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
     <script src="{{ asset('ckeditor/ckeditor.js') }}"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="{{ URL::asset('js/jquery.js') }}"></script>
-    
-    
-    
+
+
+
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -27,15 +27,15 @@
 </head>
 <body>
     <div id="app">
-        
+
         @include('inc.navbar')
-        <div class="container">
+        <div class="container" style="min-height:90vh">
             @include('inc.messages')
             @yield('content')
-           
+
         </div>
         @include('inc.footer')
     </div>
-    
+
 </body>
 </html>
