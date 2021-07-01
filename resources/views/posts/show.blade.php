@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+<div class="container" style="height:90vh">
 <div class="jumbotron">
     <a href="/posts" class="btn btn-secondary mb-2 ">Go Back</a>
     <h1>{{$post->title}}</h1>
@@ -29,6 +30,7 @@
             
         @endif
     @endif
+</div>
 </div>
 @endsection
            
