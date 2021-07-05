@@ -36,7 +36,7 @@ class PagesController extends Controller
         $data = array(
             'title' => 'Services',
             'services' => ['Web Design', 'Programming', 'SEO'],
-            'images' => ["https://images.pexels.com/photos/160107/pexels-photo-160107.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260","https://images.pexels.com/photos/3861958/pexels-photo-3861958.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260", "https://images.pexels.com/photos/4960464/pexels-photo-4960464.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" ]
+            'images' => ["/img/bes-webdesign.jpeg","/img/bes-programming.jpeg", "/img/bes-seo.jpeg" ]
         );
         return view('pages.services')->with($data);
     }

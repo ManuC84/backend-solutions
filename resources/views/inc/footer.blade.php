@@ -4,11 +4,11 @@
   <section
     class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
   >
-    <!-- Left -->
+    {{-- <!-- Left -->
     <div class="me-5 d-none d-lg-block">
       <span>Get connected with us on social networks:</span>
     </div>
-    <!-- Left -->
+    <!-- Left --> --}}
 
     <!-- Right -->
     <div>
@@ -62,17 +62,15 @@
             Products
           </h6>
           <p>
-            <a href="#!" class="text-reset">Angular</a>
+            <a href="#!" class="text-reset">Web Development</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">React</a>
+            <a href="#!" class="text-reset">SEO</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">Vue</a>
+            <a href="#!" class="text-reset">Web Design</a>
           </p>
-          <p>
-            <a href="#!" class="text-reset">Laravel</a>
-          </p>
+
         </div>
         <!-- Grid column -->
 
@@ -106,7 +104,7 @@
           <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
           <p>
             <i class="fas fa-envelope me-3"></i>
-            info@example.com
+            info@backendsolutions.com
           </p>
           <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
           <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
@@ -121,8 +119,9 @@
   <!-- Copyright -->
   <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
     © 2021 Copyright:
-    <a class="text-reset fw-bold" href="https://mdbootstrap.com/">Backend Solutions</a>
+    <a class="text-reset fw-bold">Backend Solutions</a>
   </div>
   <!-- Copyright -->
 </footer>
 <!-- Footer -->
+
